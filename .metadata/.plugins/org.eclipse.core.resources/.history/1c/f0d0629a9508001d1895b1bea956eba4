@@ -1,0 +1,5 @@
+package co.grandcircus.HotelApp;
+
+public interface HotelRepository {
+
+}

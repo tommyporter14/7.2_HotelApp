@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home Page</title>
+</head>
+<body>
+<h1>Hotel Search</h1>
+<form action="/listHotels" method="POST">
+		<h2>Search By City:</h2>
+		Continent: <input type="text" name="city"/>
+		<option value="Detroit">Detroit</option>
+  		<option value="Los Angeles">Los Angeles</option>
+  		<option value="New York City">New York City</option>
+	<input type="submit"/>
+	</form>
+
+</body>
+</html>

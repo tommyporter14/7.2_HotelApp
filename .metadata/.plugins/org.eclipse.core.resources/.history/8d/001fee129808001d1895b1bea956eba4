@@ -1,0 +1,22 @@
+package co.grandcircus.HotelApp;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HotelController {
+
+	@Autowired
+	private HotelRepository repo;
+	
+	@RequestMapping("/")
+	public String listHotels(Model model) {
+		List<Hotel> hotels = repo.findAll();
+		model.addAttribute("hotels", hotels);
+		return "listHotels";
+	}
+}
